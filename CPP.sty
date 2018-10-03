@@ -1,0 +1,58 @@
+%-----------------------------------------------------------------------
+%JPAlves 2018
+%-----------------------------------C++---------------------------------
+\RequirePackage{listings}
+\RequirePackage{color}
+\RequirePackage{rotating}
+\RequirePackage{courier}
+\normalfont
+
+\newcommand{\headerFile}[1]{
+    {\fontfamily{pcr}\fontseries{m}\selectfont
+        \begin{lstinputlisting}[language=C++,literate=
+{á}{{\'a}}1
+{à}{{\`a}}1
+{ã}{{\~a}}1
+{é}{{\'e}}1
+{ê}{{\^e}}1
+{í}{{\'i}}1
+{ó}{{\'o}}1
+{õ}{{\~o}}1
+{ú}{{\'u}}1
+{ü}{{\"u}}1
+{ç}{{\c{c}}}1]{#1.h}%
+            \label{code:#1}%
+        \end{lstinputlisting}
+    }
+}
+
+
+\newcommand{\codeFile}[1]{
+    {\fontfamily{pcr}\fontseries{m}\selectfont
+        \begin{lstinputlisting}[language=C++,literate=
+{á}{{\'a}}1
+{à}{{\`a}}1
+{ã}{{\~a}}1
+{é}{{\'e}}1
+{ê}{{\^e}}1
+{í}{{\'i}}1
+{ó}{{\'o}}1
+{õ}{{\~o}}1
+{ú}{{\'u}}1
+{ü}{{\"u}}1
+{ç}{{\c{c}}}1]{#1.cpp}%
+            \label{code:#1}%
+        \end{lstinputlisting}
+    }
+}
+
+
+\lstset{
+        extendedchars=true,%
+        basicstyle=\small,%
+        commentstyle=\ttfamily\color[rgb]{0,0.5,0},%
+        stringstyle=\color[rgb]{0,0.5,0.8},%
+        keywordstyle=\color[rgb]{0,0.0,0.8},%
+        showstringspaces=false,%
+}
+%-----------------------------------------------------------------------
